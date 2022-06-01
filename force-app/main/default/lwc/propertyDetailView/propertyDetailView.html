@@ -1,0 +1,63 @@
+<template>
+    <!-- <lightning-card title="View Record">
+        <div class="slds-m-around-small">
+            <lightning-record-form record-id = {propertyId}
+            object-api-name = {objectApiName}
+            mode= "view"
+   
+            >
+            </lightning-record-form>
+        </div>
+    </lightning-card> -->
+
+    <lightning-card icon-name="standard:agent_home" title="Property Details">
+     
+       
+
+        <template if:true={record}>
+            <div class="slds-m-around_medium">
+                <lightning-record-view-form record-id={property} object-api-name={objectApiName}>
+                
+                     <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-output-field field-name="Name"></lightning-output-field>
+                            <lightning-output-field field-name="Property_Name__c"></lightning-output-field>
+                            <lightning-output-field field-name="Resident__c"></lightning-output-field>
+                            <lightning-output-field field-name="Service_Territory__c"></lightning-output-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-text-heading_small">Address</div>
+                            <lightning-output-field field-name="Country__c"></lightning-output-field>
+                            <lightning-output-field field-name="StateCode__c"></lightning-output-field>
+                            <lightning-output-field field-name="City__c"></lightning-output-field>
+                            <lightning-output-field field-name="Street__c"></lightning-output-field>
+                            <lightning-output-field field-name="Zipcode__c"></lightning-output-field>
+
+
+
+                        </div>
+                    </div> 
+                    </lightning-record-view-form>
+
+            </div>
+        </template>
+
+        <div >
+                <!-- <lightning-record-view-form record-id={property} object-api-name={objectApiName}> -->
+                
+                    <!-- <div class="slds-grid">
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-output-field field-name="Name"></lightning-output-field>
+                            <lightning-output-field field-name="Property_Name__c"></lightning-output-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-output-field field-name="Resident__c"></lightning-output-field>
+                            <lightning-output-field field-name="Country__c"></lightning-output-field>
+                        </div>
+                    </div> -->
+                    <!-- </lightning-record-view-form> -->
+            
+            </div>
+    </lightning-card>
+
+</template>

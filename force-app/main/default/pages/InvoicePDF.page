@@ -1,0 +1,72 @@
+<apex:page standardController="Resident_Invoice__c" extensions="ExtensionInvoiceController" renderAs="PDF">
+    <h1 class="heading heading--main" style="font-family:sans-serif">Invoice</h1>
+  
+    
+    <table style="border:0.5px solid #fff; font-family:sans-serif;">
+        <tr style="color:#fff; background-color:#0000FF;">
+            <th style="padding-left:5px; padding-right:170px;">BILL TO</th>
+            <th style="background-color:#fff;">BLANK COL</th>
+            <th style="padding-left:5px; padding-right:170px;">SHIP TO</th>    
+        </tr>
+        <tr>
+            <td style="padding-left:5px;"><apex:outputField value="{!invoiceContact.Name}"/></td>
+            <td></td>
+            <td style="padding-left:5px;"><apex:outputField value="{!invoiceAccount.Name}"/></td>
+        </tr>
+         <tr>
+            <td style="padding-left:5px;"><apex:outputField value="{!invoiceContact.Phone}"/></td>
+            <td></td>
+            <td style="padding-left:5px;"><apex:outputField value="{!invoiceAccount.BillingStreet}"/></td>
+        </tr>
+          <tr>
+            <td style="padding-left:5px;"><apex:outputField value="{!invoiceContact.Email}"/></td>
+            <td></td>
+            <td style="padding-left:5px;"><apex:outputField value="{!invoiceAccount.BillingCity}"/>, 
+                <span><apex:outputField value="{!invoiceAccount.BillingPostalCode}"/></span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td style="padding-left:5px;"><apex:outputField value="{!invoiceAccount.BillingCountry}"/></td>
+
+        </tr>
+        </table>
+    <br/>
+    <table style="font-family:sans-serif;">
+    <tr style="color:#fff; background-color:#0000FF;">
+        <th style="padding-left:5px; padding-right:100px;">Invoice Number</th>
+        <th style="padding-left:5px; padding-right:250px;">Subject</th>
+        <th style="text-align:center; padding-left:15px; padding-right:5px;">Due Date</th>
+        <th style="text-align:right; padding-left:15px; padding-right:5px;">Amount</th>
+    </tr>
+        
+            
+    <tr>
+        <td style="padding-left:5px;"><apex:outputField value="{!Resident_Invoice__c.Name}"/></td>
+        <td style="padding-left:5px;"><apex:outputField value="{!Resident_Invoice__c.Subject__c}"/></td>
+        <td style="text-align:center;"><apex:outputField value="{!Resident_Invoice__c.Invoice_Due_Date__c}"/></td>
+        <td style="text-align:right; padding-right:5px;"><apex:outputField value="{!Resident_Invoice__c.Total__c}"/></td>
+	</tr>
+
+    <tr style="background-color:#dcdcdc;">
+        <td style="color:#dcdcdc;">BLANK</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+        
+        
+    </table>
+    <br/>
+    <table style="margin-left:500px; font-family:sans-serif;">
+        <tr>
+            <td style="padding-right:20px; text-align:right;">Total Price</td>
+            <td style="text-align:right;"><apex:outputField value="{!Resident_Invoice__c.Total__c}"/></td>
+        </tr>
+	</table>
+    <apex:form>    
+        <apex:commandButton value="Save and New" action="{!saveNew}" />
+    </apex:form>
+
+
+</apex:page>

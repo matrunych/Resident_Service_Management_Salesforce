@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue__c</fullName>
+    <externalId>false</externalId>
+    <label>Issue</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Issue_Section__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Problem</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Appliance</controllingFieldValue>
+            <valueName>Microwave is broken</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appliance</controllingFieldValue>
+            <valueName>Fridge installation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appliance</controllingFieldValue>
+            <valueName>Dryer drum not spinning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appliance</controllingFieldValue>
+            <valueName>Washing machine drum not spinning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appliance</controllingFieldValue>
+            <valueName>Washing machine water leakage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appliance</controllingFieldValue>
+            <valueName>Fridge water leakage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appliance</controllingFieldValue>
+            <valueName>Dishwasher has bad smell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appliance</controllingFieldValue>
+            <valueName>Dishwasher is broken</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appliance</controllingFieldValue>
+            <valueName>Dishwasher installation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electricity</controllingFieldValue>
+            <valueName>Light bulbs burned out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electricity</controllingFieldValue>
+            <valueName>Switch is broken</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>Case</object>
+        <objectField>Contact</objectField>
+        <userField>Contact</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Lease__c</object>
+        <objectField>Resident__c</objectField>
+        <userField>Contact</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>Property__c</object>
+        <objectField>Resident__c</objectField>
+        <userField>Contact</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>Resident_Invoice__c</object>
+        <objectField>Resident__c</objectField>
+        <userField>Contact</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>ServiceAppointment</object>
+        <objectField>Contact</objectField>
+        <userField>Contact</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>WorkOrder</object>
+        <objectField>Contact</objectField>
+        <userField>Contact</userField>
+    </accessMappings>
+    <name>Share property</name>
+    <profiles>customer community user</profiles>
+    <profiles>resident customer community</profiles>
+</SharingSet>
